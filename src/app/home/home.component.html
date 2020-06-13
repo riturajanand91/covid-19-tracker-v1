@@ -1,0 +1,72 @@
+ <!-- Title and Header section -->
+ <section class="section">
+   <div class="container">
+     <div class="header fadeInUp" style="animation-delay: 0.5s;">
+       <div class="header-mid">
+         <div class="titles">
+           <h1 class="title is-1">COVID-19 TRACKER INDIA</h1>
+           <h4 class="title is-4" style="font-weight: 600;">
+             <a href="https://www.linkedin.com/in/rituraj-anand-345a8a27/">A Project by Rituraj Anand </a></h4>
+         </div>
+         <br>
+         <div class="last-update" *ngIf="apidata">
+           <h3 class="title is-4">Last Updated <p style="color: rgb(40, 167, 69); font-weight: 600;">
+               {{apidata[0].lastupdatedtime }}</p>
+           </h3>
+           <!-- <h6 style="color: rgb(40, 167, 69); font-weight: 600;">06 Apr, 11:26 IST</h6> -->
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
+ <!-- Title and Header section -->
+
+ <!-- Total count widget area -->
+
+ <app-top-card></app-top-card>
+ <!-- Total count widget area -->
+ <br>
+ <hr>
+ <br>
+
+ <section>
+   <div class="container">
+     <div class="columns">
+       <!-- Statewise table -->
+       <div class="column">
+         <p class="title">Statewise Data</p>
+         <table class="table" Align="center">
+           <thead>
+             <tr>
+               <!-- <th>Sl</th> -->
+               <th>State</th>
+               <th>Confirmed</th>
+               <th>Active</th>
+               <th>Deaths</th>
+               <th>Recovered</th>
+             </tr>
+           </thead>
+
+           <tbody>
+             <tr *ngFor="let api of apidata | orderBy:'State' ">
+               <!-- <th>1</th> -->
+               <td>{{api.state}}</td>
+               <td>{{api.confirmed}}</td>
+               <td>{{api.active}}</td>
+               <td>{{api.deaths}}</td>
+               <td>{{api.recovered}}</td>
+             </tr>
+           </tbody>
+         </table>
+       </div>
+       <!-- Statewise table -->
+       <hr>
+
+       <!-- Statewise widget -->
+       <div class="column">
+         <app-cards></app-cards>
+       </div>
+       <!-- Statewise widget -->
+      </div>
+   </div>
+ </section>

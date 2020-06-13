@@ -1,0 +1,94 @@
+<!-- column layput -->
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+<div class="container">
+  <div class="column" *ngIf="districtdata">
+    <div class="col-md-8">
+      <div class="card-counter info" >
+        <i class="fa fa-database"></i>
+        <span class="count-numbers">Buxar</span>
+        <span class="count-name">{{districtdata['Bihar']['districtData']['Buxar'].confirmed}}</span>
+      </div>
+    </div>
+
+    <div class="col-md-8">
+      <div class="card-counter info" >
+        <i class="fa fa-database"></i>
+        <span class="count-numbers">Muzaffarpur</span>
+        <span class="count-name">{{districtdata['Bihar']['districtData']['Muzaffarpur'].confirmed}}</span>
+      </div>
+    </div>
+
+    <div class="col-md-8">
+      <div class="card-counter primary">
+        <i class="fa fa-database"></i>
+        <span class="count-numbers">Ghaziabad</span>
+        <span class="count-name">{{districtdata['Uttar Pradesh']['districtData']['Ghaziabad'].confirmed}}</span>
+      </div>
+    </div>
+
+    <div class="col-md-8">
+      <div class="card-counter danger">
+        <i class="fa fa-database"></i>
+        <span class="count-numbers">{{countrydata[4].state}}</span>
+        <span class="count-name">{{countrydata[4].confirmed}}</span>
+      </div>
+    </div>
+
+    <div class="col-md-8">
+      <div class="card-counter success">
+        <i class="fa fa-database"></i>
+        <span class="count-numbers">Pune</span>
+        <span class="count-name">{{districtdata['Maharashtra']['districtData']['Pune'].confirmed}}</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="container">
+  <div class="column" *ngIf="districtdata">
+    <div class="col-md-8">
+      <div class="card-counter info" >
+        <i class="fa fa-users"></i>
+        <span class="count-numbers">{{countrydata[16].state}}</span>
+        <span class="count-name">{{countrydata[16].confirmed}}</span>
+      </div>
+    </div>
+
+    <div class="col-md-8">
+      <div class="card-counter info" >
+        <i class="fa fa-users"></i>
+        <span class="count-numbers">{{countrydata[16].state}}</span>
+        <span class="count-name">{{countrydata[16].confirmed}}</span>
+      </div>
+    </div>
+
+    <div class="col-md-8">
+      <div class="card-counter primary">
+        <i class="fa fa-code-fork"></i>
+        <span class="count-numbers">{{countrydata[3].state}}</span>
+        <span class="count-name">{{countrydata[3].confirmed}}</span>
+      </div>
+    </div>
+
+    <div class="col-md-8">
+      <div class="card-counter danger">
+        <i class="fa fa-ticket"></i>
+        <span class="count-numbers">{{countrydata[6].state}}</span>
+        <span class="count-name">{{countrydata[6].confirmed}}</span>
+      </div>
+    </div>
+
+    <div class="col-md-8">
+      <div class="card-counter success">
+        <i class="fa fa-database"></i>
+        <span class="count-numbers">{{countrydata[9].statecode}}</span>
+        <span class="count-name">{{countrydata[9].confirmed}}</span>
+      </div>
+    </div>
+  </div>
+</div> -->

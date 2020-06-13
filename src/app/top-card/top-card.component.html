@@ -1,0 +1,114 @@
+<!--
+<div class="columns">
+  <div class="column">
+    <div class="card">
+      <div class="card-content">
+        <p class="title">
+          CONFIRMED
+        </p>
+        <p class="subtitle">
+          Jeff Atwood
+        </p>
+      </div>
+
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="card-content">
+        <p class="title">
+          ACTIVE
+        </p>
+        <p class="subtitle">
+          Jeff Atwood
+        </p>
+      </div>
+
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="card-content">
+        <p class="title">
+          DEATHS
+        </p>
+        <p class="subtitle">
+          Jeff Atwood
+        </p>
+      </div>
+
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="card-content">
+        <p class="title">
+         RECOVERED
+        </p>
+        <p class="subtitle">
+          Jeff Atwood
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div> -->
+<section>
+  <nav class="level" *ngIf="apidata">
+    <div class="level-item has-text-centered">
+      <div>
+        <h6 class="title is-4" style="color:RED;">CONFIRMED</h6>
+        <!-- <p class="heading">CONFIRMED</p> -->
+        <p class="title" style="color:red;"> {{apidata[0].confirmed}}</p>
+        <!-- {{apidata.confirmed}} -->
+      </div>
+    </div>
+    <div class="level-item has-text-centered">
+      <div>
+        <h6 class="title is-4" style="color:Green;">ACTIVE</h6>
+        <p class="title" style="color:Green;">{{apidata[0].active}}</p>
+      </div>
+    </div>
+    <div class="level-item has-text-centered">
+      <div>
+        <h6 class="title is-4" style="color:blueviolet;">DEATHS</h6>
+        <p class="title" style="color:blueviolet;">{{apidata[0].deaths}}</p>
+      </div>
+    </div>
+    <div class="level-item has-text-centered">
+      <div>
+        <h6 class="title is-4" style="color:grey;">RECOVERED</h6>
+        <p class="title" style="color:grey;">{{apidata[0].recovered}}</p>
+      </div>
+    </div>
+  </nav>
+</section>
+
+<section>
+<nav class="level">
+  <div class="level-item has-text-centered">
+    <div>
+      <p class="heading">CONFIRMED</p>
+      <p class="title">3,456</p>
+    </div>
+  </div>
+  <div class="level-item has-text-centered">
+    <div>
+      <p class="heading">ACTIVE</p>
+      <p class="title">123</p>
+    </div>
+  </div>
+  <div class="level-item has-text-centered">
+    <div>
+      <p class="heading">Followers</p>
+      <p class="title">456K</p>
+    </div>
+  </div>
+  <div class="level-item has-text-centered">
+    <div>
+      <p class="heading">Likes</p>
+      <p class="title">789</p>
+    </div>
+  </div>
+</nav>
+</section>

@@ -1,0 +1,51 @@
+
+<!-- new table -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <h2>Statewise Data</h2>
+    <div class="respnsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <!-- <th><a href="" ng-click="orderByField='state' ">State</a> -->
+            <th>State</th>
+            <th>Active</th>
+            <th>Confirmed</th>
+            <th>Deaths</th>
+            <th>Recovered</th>
+            <th>Lastupdated</th>
+          </tr>
+        </thead>
+  
+        <tbody>
+          <tr *ngFor="let api of apidata | orderBy:'Active' ">
+          <!-- <tr *ngFor="let api of apidata"> -->
+            <td>{{api.state}}</td>
+            <td>{{api.active}}</td>
+            <td>{{api.confirmed}}</td>
+            <td>{{api.deaths}}</td>
+            <td>{{api.recovered}}</td>
+            <td>{{api.lastupdatedtime}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</body>
+
+</html>
+
